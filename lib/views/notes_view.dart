@@ -13,6 +13,7 @@ class NotesView extends StatelessWidget {
     return BlocProvider(
       create: (context) => NotesCubit(),
       child: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 133, 130, 121),
         body: NotesViewBody(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
