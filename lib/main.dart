@@ -7,13 +7,14 @@ import 'package:note_app/views/notes_view.dart';
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kBoxName);
-  runApp(const NotesApp());
+  runApp( const NotesApp());
 }
 
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
+ 
 
-  @override
+ @override 
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,

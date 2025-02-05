@@ -8,9 +8,20 @@ class NoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return EditNoteView();
-        }));
+/*************  ✨ Codeium Command 🌟  *************/
+        Navigator.of(context).push(PageRouteBuilder(
+          transitionDuration: const Duration(milliseconds: 300),
+          pageBuilder: (_, __, ___) => EditNoteView(),
+          transitionsBuilder: (_, Animation<double> animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(1, 0),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        ));
       },
       child: Padding(
         padding: const EdgeInsets.only(bottom: 7.0),
