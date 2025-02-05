@@ -45,7 +45,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLines: 4,
           ),
           const SizedBox(
-            height: 170,
+            height: 80,
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
