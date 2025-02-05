@@ -14,7 +14,7 @@ class NoteItem extends StatelessWidget {
 /*************  ✨ Codeium Command 🌟  *************/
         Navigator.of(context).push(PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 300),
-          pageBuilder: (_, __, ___) => EditNoteView(),
+          pageBuilder: (_, __, ___) => EditNoteView(note: note,),
           transitionsBuilder: (_, Animation<double> animation, __, child) {
             return SlideTransition(
               position: Tween<Offset>(
